@@ -1,0 +1,46 @@
+﻿@model User.Task
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Task</legend>
+
+    <div class="display-label">
+         <h4>@Html.DisplayNameFor(model => model.name)</h4>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">
+        <h4>@Html.DisplayNameFor(model => model.description)</h4> 
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+
+    <div class="display-label">
+         <h4>@Html.DisplayNameFor(model => model.dateCreated)</h4>
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateCreated)
+    </div>
+
+    <div class="display-label">
+        <h4>@Html.DisplayNameFor(model => model.dateUpdated)</h4> 
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dateUpdated)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
